@@ -1,29 +1,334 @@
 import { createFileRoute } from "@tanstack/react-router";
+import {
+  Scale,
+  ShieldCheck,
+  UserRoundCheck,
+  Mail,
+  MessageCircle,
+  Menu,
+} from "lucide-react";
+import { useState } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Tremante Advocacia e Assessoria Jurídica" },
+      {
+        name: "description",
+        content:
+          "Especialistas em Direito Forense e Consultoria Jurídica. Ética, transparência e excelência para proteger seus direitos.",
+      },
+      { property: "og:title", content: "Tremante Advocacia e Assessoria Jurídica" },
+      {
+        property: "og:description",
+        content:
+          "Especialistas em Direito Forense e Consultoria Jurídica. Ética e precisão na defesa de seus direitos.",
+      },
+    ],
+    links: [
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap",
+      },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+const WHATSAPP_URL = "https://wa.me/5511916400777";
+const EMAIL = "advocacia@tremante.adv.br";
+
 function Index() {
+  const [open, setOpen] = useState(false);
+
+  const navLinks = [
+    { href: "#servicos", label: "Serviços" },
+    { href: "#sobre", label: "Sobre" },
+    { href: "#contato", label: "Contato" },
+  ];
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Header */}
+      <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-background/80 border-b border-gold/20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+          <a href="#top" className="flex items-baseline gap-2">
+            <span className="font-display text-2xl tracking-[0.25em] text-gold">
+              TREMANTE
+            </span>
+            <span className="hidden sm:inline text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
+              Advocacia
+            </span>
+          </a>
+          <nav className="hidden md:flex items-center gap-10">
+            {navLinks.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-sm tracking-wide text-foreground/80 hover:text-gold transition-colors"
+              >
+                {l.label}
+              </a>
+            ))}
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs tracking-[0.2em] uppercase border border-gold text-gold px-5 py-2.5 hover:bg-gold hover:text-primary-foreground transition-colors"
+            >
+              Consulta
+            </a>
+          </nav>
+          <button
+            onClick={() => setOpen(!open)}
+            className="md:hidden text-gold"
+            aria-label="Menu"
+          >
+            <Menu size={24} />
+          </button>
+        </div>
+        {open && (
+          <div className="md:hidden border-t border-gold/20 bg-background">
+            <div className="px-6 py-4 flex flex-col gap-4">
+              {navLinks.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="text-sm text-foreground/80 hover:text-gold"
+                >
+                  {l.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </header>
+
+      {/* Hero */}
+      <section
+        id="top"
+        className="relative pt-32 pb-24 lg:pt-44 lg:pb-32 overflow-hidden"
+      >
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 20% 20%, var(--gold) 0, transparent 40%), radial-gradient(circle at 80% 80%, var(--gold) 0, transparent 40%)",
+          }}
+        />
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="lg:col-span-7 animate-fade-up">
+            <div className="flex items-center gap-3 mb-8">
+              <span className="h-px w-12 bg-gold" />
+              <span className="text-[11px] tracking-[0.35em] uppercase text-gold">
+                Excelência Jurídica
+              </span>
+            </div>
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.1] text-foreground">
+              Especialistas em{" "}
+              <span className="text-gold italic">Direito Forense</span> e
+              Consultoria Jurídica.
+            </h1>
+            <p className="mt-8 text-lg text-muted-foreground max-w-xl leading-relaxed">
+              Comprometidos com a excelência e ética para proteger seus
+              direitos com clareza e precisão.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-5">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="group inline-flex items-center gap-3 bg-gold text-primary-foreground px-8 py-4 text-sm tracking-[0.25em] uppercase font-medium hover:opacity-90 transition-all"
+              >
+                Falar com Especialista
+                <span className="transition-transform group-hover:translate-x-1">
+                  →
+                </span>
+              </a>
+              <a
+                href="#sobre"
+                className="text-sm tracking-[0.2em] uppercase text-foreground/70 hover:text-gold transition-colors"
+              >
+                Conheça o escritório
+              </a>
+            </div>
+          </div>
+
+          {/* Empty elegant frame for photo */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end animate-fade-up">
+            <div className="relative w-full max-w-md aspect-square">
+              <div className="absolute -top-3 -left-3 w-16 h-16 border-t border-l border-gold" />
+              <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b border-r border-gold" />
+              <div className="w-full h-full border border-gold/60 bg-navy-deep/40" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Áreas de Atuação */}
+      <section id="servicos" className="py-24 lg:py-32 border-t border-gold/15">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-2xl mb-16">
+            <span className="text-[11px] tracking-[0.35em] uppercase text-gold">
+              Áreas de Atuação
+            </span>
+            <h2 className="mt-4 font-display text-3xl lg:text-5xl text-foreground">
+              Soluções jurídicas com rigor técnico.
+            </h2>
+            <div className="gold-divider mt-8 w-24" />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                Icon: Scale,
+                title: "Consultoria Forense",
+                text: "Análise de evidências com rigor técnico para suportar demandas judiciais com eficiência.",
+              },
+              {
+                Icon: ShieldCheck,
+                title: "Assessoria Jurídica Preventiva",
+                text: "Estratégias personalizadas para minimizar riscos legais, garantindo total segurança e confiança.",
+              },
+              {
+                Icon: UserRoundCheck,
+                title: "Atendimento Personalizado",
+                text: "Desenvolvimento de soluções jurídicas sob medida para atender às suas necessidades específicas.",
+              },
+            ].map(({ Icon, title, text }) => (
+              <article
+                key={title}
+                className="group relative p-10 border border-gold/20 bg-card/40 hover:border-gold/60 transition-all duration-500 hover:-translate-y-1"
+              >
+                <div className="w-14 h-14 border border-gold/50 flex items-center justify-center mb-8 group-hover:border-gold transition-colors">
+                  <Icon
+                    size={26}
+                    strokeWidth={1.2}
+                    className="text-gold"
+                  />
+                </div>
+                <h3 className="font-display text-2xl text-foreground mb-4">
+                  {title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-[15px]">
+                  {text}
+                </p>
+                <div className="mt-8 h-px w-10 bg-gold/60 group-hover:w-20 transition-all duration-500" />
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sobre */}
+      <section id="sobre" className="py-24 lg:py-32 bg-navy-deep/60">
+        <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center">
+          <span className="text-[11px] tracking-[0.35em] uppercase text-gold">
+            Sobre Nós
+          </span>
+          <h2 className="mt-6 font-display text-3xl lg:text-5xl text-foreground leading-tight">
+            Uma atuação diária pautada em{" "}
+            <span className="italic text-gold">ética</span> e{" "}
+            <span className="italic text-gold">excelência</span>.
+          </h2>
+          <div className="gold-divider mt-10 mx-auto w-32" />
+          <p className="mt-10 text-lg text-muted-foreground leading-[1.9] max-w-3xl mx-auto">
+            O escritório Tremante Advocacia e Assessoria Jurídica atua
+            diariamente em Direito Forense, construindo uma reputação sólida
+            sobre os pilares da transparência, dedicação e promoção da
+            justiça. Tratamos cada caso com a profundidade que ele merece,
+            unindo técnica apurada, sensibilidade humana e compromisso
+            absoluto com os interesses de nossos clientes.
+          </p>
+          <p className="mt-6 text-base text-muted-foreground/80 leading-relaxed max-w-2xl mx-auto italic">
+            Defender direitos é mais do que uma profissão — é um dever ético
+            que conduzimos com responsabilidade e respeito.
+          </p>
+        </div>
+      </section>
+
+      {/* Contato */}
+      <section id="contato" className="py-24 lg:py-32">
+        <div className="max-w-6xl mx-auto px-6 lg:px-10">
+          <div className="text-center mb-16">
+            <span className="text-[11px] tracking-[0.35em] uppercase text-gold">
+              Contato
+            </span>
+            <h2 className="mt-4 font-display text-3xl lg:text-5xl text-foreground">
+              Fale com nossa equipe.
+            </h2>
+            <p className="mt-6 text-muted-foreground max-w-xl mx-auto">
+              Canais diretos para atendimento ágil e confidencial.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <a
+              href={`mailto:${EMAIL}`}
+              className="group flex items-center gap-6 p-8 border border-gold/30 hover:border-gold bg-card/40 transition-all"
+            >
+              <div className="w-14 h-14 border border-gold/50 flex items-center justify-center shrink-0 group-hover:bg-gold/10 transition-colors">
+                <Mail size={22} strokeWidth={1.3} className="text-gold" />
+              </div>
+              <div className="min-w-0">
+                <div className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground mb-1">
+                  E-mail
+                </div>
+                <div className="font-display text-xl text-foreground truncate group-hover:text-gold transition-colors">
+                  {EMAIL}
+                </div>
+              </div>
+            </a>
+
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="group flex items-center gap-6 p-8 border border-gold/30 hover:border-gold bg-card/40 transition-all"
+            >
+              <div className="w-14 h-14 border border-gold/50 flex items-center justify-center shrink-0 group-hover:bg-gold/10 transition-colors">
+                <MessageCircle size={22} strokeWidth={1.3} className="text-gold" />
+              </div>
+              <div>
+                <div className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground mb-1">
+                  WhatsApp
+                </div>
+                <div className="font-display text-xl text-foreground group-hover:text-gold transition-colors">
+                  (11) 91640-0777
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-gold/20 py-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-4">
+          <span className="font-display text-lg tracking-[0.25em] text-gold">
+            TREMANTE
+          </span>
+          <p className="text-xs text-muted-foreground tracking-wider">
+            © {new Date().getFullYear()} Tremante Advocacia e Assessoria Jurídica.
+            Todos os direitos reservados.
+          </p>
+        </div>
+      </footer>
+
+      {/* Floating WhatsApp */}
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Conversar no WhatsApp"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg animate-pulse-ring hover:scale-105 transition-transform"
+      >
+        <svg viewBox="0 0 32 32" className="w-7 h-7" fill="currentColor" aria-hidden>
+          <path d="M19.11 17.21c-.29-.15-1.7-.84-1.96-.93-.26-.1-.46-.15-.65.15s-.74.93-.91 1.12c-.17.19-.34.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.77-1.43-1.71-1.6-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.57-.89-2.15-.23-.56-.47-.49-.65-.5l-.55-.01c-.19 0-.5.07-.77.36-.26.29-1 .98-1 2.39 0 1.41 1.03 2.78 1.17 2.97.15.19 2.02 3.08 4.89 4.32.68.29 1.22.47 1.63.6.68.22 1.31.19 1.8.12.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM16.02 5.33c-5.9 0-10.7 4.8-10.7 10.7 0 1.88.49 3.72 1.43 5.33L5 27l5.79-1.69a10.65 10.65 0 0 0 5.22 1.34h.01c5.9 0 10.7-4.8 10.7-10.7 0-2.86-1.11-5.55-3.14-7.57a10.62 10.62 0 0 0-7.56-3.05zm0 19.62h-.01a8.9 8.9 0 0 1-4.53-1.24l-.32-.19-3.44 1 .92-3.35-.21-.34a8.88 8.88 0 0 1-1.36-4.74c0-4.91 4-8.91 8.92-8.91 2.38 0 4.62.93 6.3 2.62a8.86 8.86 0 0 1 2.61 6.3c0 4.92-4 8.92-8.92 8.92z" />
+        </svg>
+      </a>
     </div>
   );
 }
