@@ -257,6 +257,28 @@ function Index() {
         </div>
       </section>
 
+      {/* CTA Band */}
+      <section className="py-16 lg:py-20 border-y border-gold/30 bg-navy-deep">
+        <div className="max-w-4xl mx-auto px-6 lg:px-10 text-center">
+          <p className="font-display text-2xl lg:text-3xl text-foreground leading-snug">
+            Precisa de uma avaliação para o seu caso? Agende uma consulta e obtenha uma análise{" "}
+            <span className="italic text-gold">técnica, sigilosa e especializada</span>{" "}
+            para proteger seus direitos.
+          </p>
+          <div className="mt-10">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-3 bg-gold text-primary-foreground px-10 py-4 text-sm tracking-[0.25em] uppercase font-medium hover:opacity-90 transition-all"
+            >
+              Iniciar Agendamento
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Sobre */}
       <section id="sobre" className="py-24 lg:py-32 bg-navy-deep/60">
         <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center">
