@@ -173,32 +173,47 @@ function Index() {
       {/* Áreas de Atuação */}
       <section id="servicos" className="py-24 lg:py-32 border-t border-gold/15">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="max-w-2xl mb-16">
+          <div className="max-w-3xl mb-16">
             <span className="text-[11px] tracking-[0.35em] uppercase text-gold">
               Áreas de Atuação
             </span>
             <h2 className="mt-4 font-display text-3xl lg:text-5xl text-foreground">
-              Soluções jurídicas com rigor técnico.
+              Atuação estratégica em múltiplas frentes do Direito.
             </h2>
             <div className="gold-divider mt-8 w-24" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                Icon: Scale,
-                title: "Consultoria Forense",
-                text: "Análise de evidências com rigor técnico para suportar demandas judiciais com eficiência.",
+                Icon: Gavel,
+                title: "Direito Penal",
+                text: "Atuação em todas as fases do processo penal, desde a investigação até o Superior Tribunal de Justiça. Defesa técnica em flagrantes, habeas corpus, ações penais e recursos especiais, com estratégias voltadas à preservação da liberdade e dos direitos fundamentais do acusado.",
+              },
+              {
+                Icon: Heart,
+                title: "Direito de Família",
+                text: "Assistência completa em questões familiares, incluindo divórcios, partilha de bens, guarda de filhos, pensão alimentícia, adoção e reconhecimento de união estável. Abordagem sensível e estratégica para proteger os laços familiares e os direitos de todos os envolvidos.",
+              },
+              {
+                Icon: FileText,
+                title: "Direito Contratual e do Consumidor",
+                text: "Elaboração e revisão de contratos comerciais e civis, análise de cláusulas abusivas, rescisões contratuais e defesa do consumidor em litígios contra fornecedores. Garantimos que seus acordos sejam seguros, transparentes e alinhados à legislação vigente.",
+              },
+              {
+                Icon: Building2,
+                title: "Direito Empresarial",
+                text: "Assessoria jurídica integral para empresas de todos os portes, abrangendo constituição de sociedades, fusões e aquisições, compliance societário, recuperação judicial e extrajudicial, além de mediação e arbitragem. Proteção do patrimônio empresarial com visão estratégica.",
+              },
+              {
+                Icon: ShoppingCart,
+                title: "Direito do Consumidor",
+                text: "Defesa assertiva dos direitos do consumidor em casos de publicidade enganosa, vícios de produtos, cobranças indevidas, práticas abusivas e rescisão de contratos de adesão. Atuamos com agilidade para reparar danos materiais e morais causados por fornecedores.",
               },
               {
                 Icon: ShieldCheck,
                 title: "Assessoria Jurídica Preventiva",
-                text: "Estratégias personalizadas para minimizar riscos legais, garantindo total segurança e confiança.",
-              },
-              {
-                Icon: UserRoundCheck,
-                title: "Atendimento Personalizado",
-                text: "Desenvolvimento de soluções jurídicas sob medida para atender às suas necessidades específicas.",
+                text: "Identificação e neutralização de riscos legais antes que se transformem em litígios. Por meio de consultoria permanente, revisão de processos internos e análise de conformidade, construímos um ambiente seguro para sua empresa ou sua vida pessoal.",
               },
             ].map(({ Icon, title, text }) => (
               <article
