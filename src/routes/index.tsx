@@ -253,7 +253,7 @@ function Index() {
           </h2>
           <div className="gold-divider mt-10 mx-auto w-32" />
           <p className="mt-10 text-lg text-muted-foreground leading-[1.9] max-w-3xl mx-auto">
-            O escritório Tremante Advocacia e Assessoria Jurídica atua
+            O Escritório Tremante Advocacia e Assessoria Jurídica atua
             diariamente em Direito Forense, construindo uma reputação sólida
             sobre os pilares da transparência, dedicação e promoção da
             justiça. Tratamos cada caso com a profundidade que ele merece,
