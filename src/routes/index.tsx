@@ -154,7 +154,7 @@ function Index() {
                 href="#sobre"
                 className="text-sm tracking-[0.2em] uppercase text-foreground/70 hover:text-gold transition-colors"
               >
-                Conheça o escritório
+                Conheça o Escritório
               </a>
             </div>
           </div>
