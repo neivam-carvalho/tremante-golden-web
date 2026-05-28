@@ -1,8 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
-  Scale,
+  Gavel,
+  Heart,
+  FileText,
+  ShoppingCart,
+  Building2,
   ShieldCheck,
-  UserRoundCheck,
   Mail,
   MessageCircle,
   Menu,
