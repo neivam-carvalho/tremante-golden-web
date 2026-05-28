@@ -314,10 +314,11 @@ function Index() {
               Contato
             </span>
             <h2 className="mt-4 font-display text-3xl lg:text-5xl text-foreground">
-              Fale com nossa equipe.
+              Agende sua Consulta
             </h2>
-            <p className="mt-6 text-muted-foreground max-w-xl mx-auto">
-              Canais diretos para atendimento ágil e confidencial.
+            <div className="gold-divider mt-6 mx-auto w-24" />
+            <p className="mt-6 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Os atendimentos são realizados de forma personalizada, presencial ou online, mediante agendamento prévio. Escolha o canal de sua preferência abaixo.
             </p>
           </div>
 
