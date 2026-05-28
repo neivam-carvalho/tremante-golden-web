@@ -145,7 +145,7 @@ function Index() {
                 rel="noreferrer"
                 className="group inline-flex items-center gap-3 bg-gold text-primary-foreground px-8 py-4 text-sm tracking-[0.25em] uppercase font-medium hover:opacity-90 transition-all"
               >
-                Falar com Especialista
+                Agendar Consulta Jurídica
                 <span className="transition-transform group-hover:translate-x-1">
                   →
                 </span>
@@ -159,12 +159,29 @@ function Index() {
             </div>
           </div>
 
-          {/* Empty elegant frame for photo */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end animate-fade-up">
-            <div className="relative w-full max-w-md aspect-square">
+          {/* Profile frame + bio */}
+          <div className="lg:col-span-5 flex flex-col items-center lg:items-end gap-8 animate-fade-up">
+            <div className="relative w-full max-w-sm aspect-square">
               <div className="absolute -top-3 -left-3 w-16 h-16 border-t border-l border-gold" />
               <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b border-r border-gold" />
               <div className="w-full h-full border border-gold/60 bg-navy-deep/40" />
+            </div>
+            <div className="w-full max-w-md text-left">
+              <h3 className="font-display text-2xl text-gold mb-4">
+                Dr. Alan Kardec Tremante
+              </h3>
+              <div className="gold-divider w-16 mb-5" />
+              <div className="space-y-4 text-[15px] text-muted-foreground leading-relaxed">
+                <p>
+                  Advogado inscrito nos quadros da Ordem dos Advogados do Brasil, fundador do escritório Tremante Advocacia e Assessoria Jurídica. Com sólida formação técnica e atuação especializada em Direito Forense e Consultoria Estratégica, dedica-se à defesa intransigente dos direitos e interesses de seus constituintes.
+                </p>
+                <p>
+                  Pautando sua prática profissional nos pilares da ética fundamental, da transparência absoluta e do rigor científico, o Dr. Alan Kardec Tremante consolidou sua trajetória através do desenvolvimento de soluções jurídicas personalizadas de alta performance, aptas a responder com precisão e agilidade tanto a litígios complexos quanto a demandas de natureza preventiva.
+                </p>
+                <p>
+                  Sua filosofia de atuação une o profundo conhecimento doutrinário e jurisprudencial a um atendimento humanizado, garantindo segurança jurídica, clareza processual e excelência técnica em cada etapa da jornada legal de seus clientes.
+                </p>
+              </div>
             </div>
           </div>
         </div>
