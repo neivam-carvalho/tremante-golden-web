@@ -145,7 +145,7 @@ function Index() {
                 rel="noreferrer"
                 className="group inline-flex items-center gap-3 bg-gold text-primary-foreground px-8 py-4 text-sm tracking-[0.25em] uppercase font-medium hover:opacity-90 transition-all"
               >
-                Falar com Especialista
+                Agendar Consulta Jurídica
                 <span className="transition-transform group-hover:translate-x-1">
                   →
                 </span>
@@ -159,12 +159,29 @@ function Index() {
             </div>
           </div>
 
-          {/* Empty elegant frame for photo */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end animate-fade-up">
-            <div className="relative w-full max-w-md aspect-square">
+          {/* Profile frame + bio */}
+          <div className="lg:col-span-5 flex flex-col items-center lg:items-end gap-8 animate-fade-up">
+            <div className="relative w-full max-w-sm aspect-square">
               <div className="absolute -top-3 -left-3 w-16 h-16 border-t border-l border-gold" />
               <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b border-r border-gold" />
               <div className="w-full h-full border border-gold/60 bg-navy-deep/40" />
+            </div>
+            <div className="w-full max-w-md text-left">
+              <h3 className="font-display text-2xl text-gold mb-4">
+                Dr. Alan Kardec Tremante
+              </h3>
+              <div className="gold-divider w-16 mb-5" />
+              <div className="space-y-4 text-[15px] text-muted-foreground leading-relaxed">
+                <p>
+                  Advogado inscrito nos quadros da Ordem dos Advogados do Brasil, fundador do escritório Tremante Advocacia e Assessoria Jurídica. Com sólida formação técnica e atuação especializada em Direito Forense e Consultoria Estratégica, dedica-se à defesa intransigente dos direitos e interesses de seus constituintes.
+                </p>
+                <p>
+                  Pautando sua prática profissional nos pilares da ética fundamental, da transparência absoluta e do rigor científico, o Dr. Alan Kardec Tremante consolidou sua trajetória através do desenvolvimento de soluções jurídicas personalizadas de alta performance, aptas a responder com precisão e agilidade tanto a litígios complexos quanto a demandas de natureza preventiva.
+                </p>
+                <p>
+                  Sua filosofia de atuação une o profundo conhecimento doutrinário e jurisprudencial a um atendimento humanizado, garantindo segurança jurídica, clareza processual e excelência técnica em cada etapa da jornada legal de seus clientes.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -187,33 +204,33 @@ function Index() {
             {[
               {
                 Icon: Gavel,
-                title: "Direito Penal",
-                text: "Atuação em todas as fases do processo penal, desde a investigação até o Superior Tribunal de Justiça. Defesa técnica em flagrantes, habeas corpus, ações penais e recursos especiais, com estratégias voltadas à preservação da liberdade e dos direitos fundamentais do acusado.",
+                title: "Direito Penal e Processual Penal",
+                text: "Atuação estratégica e verticalizada na defesa das garantias fundamentais e da dignidade da pessoa humana. O escritório oferece representação técnica em inquéritos policiais, procedimentos investigatórios criminais (PIC) e ações penais em todas as instâncias judiciais, incluindo os Tribunais Superiores. Com foco na análise minuciosa de provas, legalidade estrita dos atos processuais e impetração de remédios constitucionais, garantimos uma defesa combativa e de excelência tanto na seara do direito penal clássico quanto no direito penal econômico.",
               },
               {
                 Icon: Heart,
-                title: "Direito de Família",
-                text: "Assistência completa em questões familiares, incluindo divórcios, partilha de bens, guarda de filhos, pensão alimentícia, adoção e reconhecimento de união estável. Abordagem sensível e estratégica para proteger os laços familiares e os direitos de todos os envolvidos.",
-              },
-              {
-                Icon: FileText,
-                title: "Direito Contratual e do Consumidor",
-                text: "Elaboração e revisão de contratos comerciais e civis, análise de cláusulas abusivas, rescisões contratuais e defesa do consumidor em litígios contra fornecedores. Garantimos que seus acordos sejam seguros, transparentes e alinhados à legislação vigente.",
-              },
-              {
-                Icon: Building2,
-                title: "Direito Empresarial",
-                text: "Assessoria jurídica integral para empresas de todos os portes, abrangendo constituição de sociedades, fusões e aquisições, compliance societário, recuperação judicial e extrajudicial, além de mediação e arbitragem. Proteção do patrimônio empresarial com visão estratégica.",
+                title: "Direito de Família e Sucessões",
+                text: "Condução técnica de demandas de alta complexidade emocional e patrimonial, pautada pelo sigilo absoluto e pelo acolhimento humanizado. Especialização em divórcios judiciais e extrajudiciais, partilha complexa de bens, fixação e revisão de alimentos sob o binômio necessidade-possibilidade, além de disputas envolvendo a guarda e convivência familiar. No âmbito sucessório, atuamos com precisão na abertura de inventários, arrolamentos e na estruturação de planejamento sucessório, visando a preservação do patrimônio e a mitigação de litígios familiares.",
               },
               {
                 Icon: ShoppingCart,
                 title: "Direito do Consumidor",
-                text: "Defesa assertiva dos direitos do consumidor em casos de publicidade enganosa, vícios de produtos, cobranças indevidas, práticas abusivas e rescisão de contratos de adesão. Atuamos com agilidade para reparar danos materiais e morais causados por fornecedores.",
+                text: "Defesa intransigente do equilíbrio nas relações de consumo, com forte atuação contra o abuso do poder econômico e práticas comerciais desleais. Especializado na tutela de direitos individuais e homogêneos, o escritório combate falhas graves na prestação de serviços (notadamente nos setores bancário, de telecomunicações e de saúde suplementar) e vícios de produtos. Atuação focada na reparação integral de danos materiais e morais, inversão do ônus da prova e aplicação rigorosa das normas protetivas do Código de Defesa do Consumidor.",
+              },
+              {
+                Icon: FileText,
+                title: "Teoria Geral dos Contratos e Obrigações",
+                text: "Engenharia jurídica aplicada à elaboração, análise e revisão de instrumentos contratuais civis, imobiliários e mercantis. Nosso foco consiste na precisa alocação de riscos, estabelecimento de cláusulas penais equilibradas, garantias eficientes e mecanismos claros de resolução de conflitos. Através de uma redação técnica e assertiva, asseguramos que o negócio jurídico possua plena validade, eficácia e esteja blindado contra futuras alegações de nulidade, imprevisão ou quebra da boa-fé objetiva.",
+              },
+              {
+                Icon: Building2,
+                title: "Direito Civil e Responsabilidade Civil",
+                text: "Soluções jurídicas abrangentes na esfera das relações privadas, com ênfase na defesa da propriedade, posse, contratos e direitos de personalidade. Destaca-se nossa atuação em sede de Responsabilidade Civil, pleiteando ou contestando indenizações decorrentes de atos ilícitos que gerem danos morais, estéticos, materiais ou lucros cessantes. Atuamos de forma analítica na jurisprudência pátria para quantificar e fundamentar as demandas com o rigor técnico exigido pelos tribunais contemporâneos.",
               },
               {
                 Icon: ShieldCheck,
-                title: "Assessoria Jurídica Preventiva",
-                text: "Identificação e neutralização de riscos legais antes que se transformem em litígios. Por meio de consultoria permanente, revisão de processos internos e análise de conformidade, construímos um ambiente seguro para sua empresa ou sua vida pessoal.",
+                title: "Assessoria Jurídica Preventiva e Consultiva",
+                text: "Consultoria de vanguarda focada no gerenciamento de riscos e na advocacia proativa. Através de auditorias jurídicas, pareceres fundamentados e análises prévias de cenários negociais, identificamos vulnerabilidades antes que elas se transformem em passivos judiciais onerosos. Esta modalidade de atuação proporciona aos nossos clientes segurança jurídica absoluta para a tomada de decisões estratégicas, economia de recursos e a garantia de que seus atos estejam em estrita conformidade com o ordenamento jurídico vigente.",
               },
             ].map(({ Icon, title, text }) => (
               <article
@@ -236,6 +253,28 @@ function Index() {
                 <div className="mt-8 h-px w-10 bg-gold/60 group-hover:w-20 transition-all duration-500" />
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Band */}
+      <section className="py-16 lg:py-20 border-y border-gold/30 bg-navy-deep">
+        <div className="max-w-4xl mx-auto px-6 lg:px-10 text-center">
+          <p className="font-display text-2xl lg:text-3xl text-foreground leading-snug">
+            Precisa de uma avaliação para o seu caso? Agende uma consulta e obtenha uma análise{" "}
+            <span className="italic text-gold">técnica, sigilosa e especializada</span>{" "}
+            para proteger seus direitos.
+          </p>
+          <div className="mt-10">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-3 bg-gold text-primary-foreground px-10 py-4 text-sm tracking-[0.25em] uppercase font-medium hover:opacity-90 transition-all"
+            >
+              Iniciar Agendamento
+              <span>→</span>
+            </a>
           </div>
         </div>
       </section>
@@ -275,10 +314,11 @@ function Index() {
               Contato
             </span>
             <h2 className="mt-4 font-display text-3xl lg:text-5xl text-foreground">
-              Fale com nossa equipe.
+              Agende sua Consulta
             </h2>
-            <p className="mt-6 text-muted-foreground max-w-xl mx-auto">
-              Canais diretos para atendimento ágil e confidencial.
+            <div className="gold-divider mt-6 mx-auto w-24" />
+            <p className="mt-6 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Os atendimentos são realizados de forma personalizada, presencial ou online, mediante agendamento prévio. Escolha o canal de sua preferência abaixo.
             </p>
           </div>
 
