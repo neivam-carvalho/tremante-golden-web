@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import alanPhoto from "@/assets/alan-tremante.jpeg.asset.json";
+import tremanteLogo from "@/assets/tremante-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
