@@ -11,6 +11,7 @@ import {
   Menu,
 } from "lucide-react";
 import { useState } from "react";
+import alanPhoto from "@/assets/alan-tremante.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
