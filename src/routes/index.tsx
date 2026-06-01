@@ -163,9 +163,16 @@ function Index() {
           {/* Profile frame + bio */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-end gap-8 animate-fade-up">
             <div className="relative w-full max-w-sm aspect-square">
-              <div className="absolute -top-3 -left-3 w-16 h-16 border-t border-l border-gold" />
-              <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b border-r border-gold" />
-              <div className="w-full h-full border border-gold/60 bg-navy-deep/40" />
+              <div className="absolute -top-3 -left-3 w-16 h-16 border-t border-l border-gold z-10" />
+              <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b border-r border-gold z-10" />
+              <div className="w-full h-full border border-gold/60 bg-navy-deep/40 overflow-hidden">
+                <img
+                  src={alanPhoto.url}
+                  alt="Dr. Alan Kardec Tremante"
+                  className="w-full h-full object-cover object-top"
+                  loading="eager"
+                />
+              </div>
             </div>
             <div className="w-full max-w-md text-left">
               <h3 className="font-display text-2xl text-gold mb-4">
