@@ -373,6 +373,15 @@ function Index() {
               </div>
             </a>
           </div>
+
+          <div className="mt-20 flex flex-col items-center gap-4">
+            <img
+              src={tremanteLogo.url}
+              alt="Logotipo Tremante Advocacia"
+              className="h-20 w-auto opacity-90"
+            />
+            <div className="gold-divider w-16" />
+          </div>
         </div>
       </section>
 
