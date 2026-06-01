@@ -96,8 +96,14 @@
     height: 1px;
   }
 
-  .gold-logo-filter {
-    filter: invert(72%) sepia(24%) saturate(620%) hue-rotate(5deg) brightness(90%) contrast(90%);
+  .gold-logo-mask {
+    background-color: var(--gold);
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
   }
 
   @keyframes pulse-ring {
