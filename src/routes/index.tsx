@@ -61,7 +61,7 @@ function Index() {
             <img
               src={tremanteLogo.url}
               alt="Logotipo Tremante Advocacia"
-              className="h-10 w-auto"
+              className="h-10 w-auto gold-logo-filter"
             />
             <span className="font-display text-2xl tracking-[0.25em] text-gold">
               TREMANTE
@@ -378,7 +378,7 @@ function Index() {
             <img
               src={tremanteLogo.url}
               alt="Logotipo Tremante Advocacia"
-              className="h-20 w-auto opacity-90"
+              className="h-20 w-auto opacity-90 gold-logo-filter"
             />
             <div className="gold-divider w-16" />
           </div>
