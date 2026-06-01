@@ -57,7 +57,12 @@ function Index() {
       {/* Header */}
       <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-background/80 border-b border-gold/20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-          <a href="#top" className="flex items-baseline gap-2">
+          <a href="#top" className="flex items-center gap-3">
+            <img
+              src={tremanteLogo.url}
+              alt="Logotipo Tremante Advocacia"
+              className="h-10 w-auto"
+            />
             <span className="font-display text-2xl tracking-[0.25em] text-gold">
               TREMANTE
             </span>
