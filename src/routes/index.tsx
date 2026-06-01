@@ -11,6 +11,7 @@ import {
   Menu,
 } from "lucide-react";
 import { useState } from "react";
+import alanPhoto from "@/assets/alan-tremante.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -134,7 +135,7 @@ function Index() {
               <span className="text-gold italic">Direito Forense</span> e
               Consultoria Jurídica.
             </h1>
-            <p className="mt-8 text-lg text-muted-foreground max-w-xl leading-relaxed">
+            <p className="mt-8 text-lg text-muted-foreground max-w-xl leading-relaxed text-justify">
               Comprometidos com a excelência e ética para proteger seus
               direitos com clareza e precisão.
             </p>
@@ -162,16 +163,23 @@ function Index() {
           {/* Profile frame + bio */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-end gap-8 animate-fade-up">
             <div className="relative w-full max-w-sm aspect-square">
-              <div className="absolute -top-3 -left-3 w-16 h-16 border-t border-l border-gold" />
-              <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b border-r border-gold" />
-              <div className="w-full h-full border border-gold/60 bg-navy-deep/40" />
+              <div className="absolute -top-3 -left-3 w-16 h-16 border-t border-l border-gold z-10" />
+              <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b border-r border-gold z-10" />
+              <div className="w-full h-full border border-gold/60 bg-navy-deep/40 overflow-hidden">
+                <img
+                  src={alanPhoto.url}
+                  alt="Dr. Alan Kardec Tremante"
+                  className="w-full h-full object-cover object-top"
+                  loading="eager"
+                />
+              </div>
             </div>
             <div className="w-full max-w-md text-left">
               <h3 className="font-display text-2xl text-gold mb-4">
                 Dr. Alan Kardec Tremante
               </h3>
               <div className="gold-divider w-16 mb-5" />
-              <div className="space-y-4 text-[15px] text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-[15px] text-muted-foreground leading-relaxed text-justify">
                 <p>
                   Advogado inscrito nos quadros da Ordem dos Advogados do Brasil, fundador do escritório Tremante Advocacia e Assessoria Jurídica. Com sólida formação técnica e atuação especializada em Direito Forense e Consultoria Estratégica, dedica-se à defesa intransigente dos direitos e interesses de seus constituintes.
                 </p>
@@ -247,7 +255,7 @@ function Index() {
                 <h3 className="font-display text-2xl text-foreground mb-4">
                   {title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-[15px]">
+                <p className="text-muted-foreground leading-relaxed text-[15px] text-justify">
                   {text}
                 </p>
                 <div className="mt-8 h-px w-10 bg-gold/60 group-hover:w-20 transition-all duration-500" />
@@ -291,7 +299,7 @@ function Index() {
             <span className="italic text-gold">excelência</span>.
           </h2>
           <div className="gold-divider mt-10 mx-auto w-32" />
-          <p className="mt-10 text-lg text-muted-foreground leading-[1.9] max-w-3xl mx-auto">
+          <p className="mt-10 text-lg text-muted-foreground leading-[1.9] max-w-3xl mx-auto text-justify">
             O Escritório Tremante Advocacia e Assessoria Jurídica atua
             diariamente em Direito Forense, construindo uma reputação sólida
             sobre os pilares da transparência, dedicação e promoção da
@@ -317,7 +325,7 @@ function Index() {
               Agende sua Consulta
             </h2>
             <div className="gold-divider mt-6 mx-auto w-24" />
-            <p className="mt-6 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-6 text-muted-foreground max-w-2xl mx-auto leading-relaxed text-justify">
               Os atendimentos são realizados de forma personalizada, presencial ou online, mediante agendamento prévio. Escolha o canal de sua preferência abaixo.
             </p>
           </div>
