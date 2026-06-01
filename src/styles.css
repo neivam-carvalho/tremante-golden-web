@@ -96,6 +96,10 @@
     height: 1px;
   }
 
+  .gold-logo-filter {
+    filter: invert(72%) sepia(24%) saturate(620%) hue-rotate(5deg) brightness(90%) contrast(90%);
+  }
+
   @keyframes pulse-ring {
     0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55); }
     70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
