@@ -338,6 +338,9 @@ function Index() {
             <p className="mt-6 text-muted-foreground max-w-2xl mx-auto leading-relaxed text-justify">
               Os atendimentos são realizados de forma personalizada, presencial ou online, mediante agendamento prévio. Escolha o canal de sua preferência abaixo.
             </p>
+            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto leading-relaxed text-justify">
+              Endereço: Rua Braga, 202 - Centro, São Bernardo do Campo - SP, Torre 7 - Unidade 184, CEP 09725-160
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
