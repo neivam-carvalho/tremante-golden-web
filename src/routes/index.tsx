@@ -11,7 +11,7 @@ import {
   Menu,
 } from "lucide-react";
 import { useState } from "react";
-import alanPhoto from "@/assets/alan-tremante.jpeg.asset.json";
+import alanPhoto from "@/assets/alan-tremante.jpeg";
 import tremanteLogo from "@/assets/tremante-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -177,7 +177,7 @@ function Index() {
               <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b border-r border-gold z-10" />
               <div className="w-full h-full border border-gold/60 bg-navy-deep/40 overflow-hidden">
                 <img
-                  src={alanPhoto.url}
+                  src={alanPhoto}
                   alt="Dr. Alan Kardec Tremante"
                   className="w-full h-full object-cover object-top"
                   loading="eager"
