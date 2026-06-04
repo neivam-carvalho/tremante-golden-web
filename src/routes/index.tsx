@@ -13,6 +13,7 @@ import {
 import { useState } from "react";
 import alanPhoto from "@/assets/alan-tremante.jpeg";
 import tremanteLogo from "@/assets/tremante-logo.png.asset.json";
+import tremanteLogoImage from "@/assets/tremante_logo.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -382,14 +383,10 @@ function Index() {
           </div>
 
           <div className="mt-20 flex flex-col items-center gap-4">
-            <span
-              role="img"
-              aria-label="Logotipo Tremante Advocacia"
-              className="gold-logo-mask block h-20 w-20 opacity-90"
-              style={{
-                WebkitMaskImage: `url(${tremanteLogo.url})`,
-                maskImage: `url(${tremanteLogo.url})`,
-              }}
+            <img
+              src={tremanteLogoImage}
+              alt="Logotipo Tremante Advocacia"
+              className="block h-20 w-20 object-contain opacity-90"
             />
             <div className="gold-divider w-16" />
           </div>
