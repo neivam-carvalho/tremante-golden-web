@@ -335,7 +335,7 @@ function Index() {
               Os atendimentos são realizados de forma personalizada, presencial ou online, mediante agendamento prévio. Escolha o canal de sua preferência abaixo.
             </p>
             <p className="mt-4 text-muted-foreground max-w-2xl mx-auto leading-relaxed text-justify">
-              Endereço: Rua Braga, 202 - Centro, São Bernardo do Campo - SP, Torre 7 - Unidade 184, CEP 09725-160
+              Endereço: Rua Braga, 202 - Centro, São Bernardo do Campo - SP, Torre 7 - Unidade 183, CEP 09725-160
             </p>
           </div>
 
