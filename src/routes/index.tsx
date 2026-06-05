@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import alanPhoto from "@/assets/alan-tremante.jpeg";
-import tremanteLogo from "@/assets/tremante-logo.png.asset.json";
 import tremanteLogoImage from "@/assets/tremante_logo.jpeg";
 
 export const Route = createFileRoute("/")({
@@ -59,14 +58,10 @@ function Index() {
       <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-background/80 border-b border-gold/20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
-            <span
-              role="img"
-              aria-label="Logotipo Tremante Advocacia"
-              className="gold-logo-mask block h-10 w-10"
-              style={{
-                WebkitMaskImage: `url(${tremanteLogo.url})`,
-                maskImage: `url(${tremanteLogo.url})`,
-              }}
+            <img
+              src={tremanteLogoImage}
+              alt="Logotipo Tremante Advocacia"
+              className="block h-10 w-10 shrink-0 object-contain"
             />
             <span className="font-display text-2xl tracking-[0.25em] text-gold">
               TREMANTE
